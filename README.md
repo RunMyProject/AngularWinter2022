@@ -3,7 +3,11 @@
   # * for Angular 13.1                  *
   # * @Jan / 2022 - by Edoardo Sabatini *
 ##  *************************************
- 
+
+Usage from console:
+- npm install
+- npm start
+
 # AngularWinter2022
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
