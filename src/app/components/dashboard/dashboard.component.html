@@ -1,0 +1,18 @@
+<!--
+/*
+  *************************************
+  * AngularWinter2022                 *
+  * for Angular 13.1                  *
+  * @Jan / 2022 - by Edoardo Sabatini *
+  *************************************
+*/
+-->
+<nav class="dashboard">
+  <div><img src="/assets/images/lista_prodotti.png" height="30px"></div>
+  <div *ngFor="let number of [0,1,2]" class="section group">
+    <div *ngFor="let number of [0,1,2]" class="col span_1_of_3"><img src="/assets/images/prodotto.png" height="400px"></div>
+  </div>
+  <div class="section group">
+    <div *ngFor="let number of [0]" class="col span_1_of_3"><img src="/assets/images/prodotto.png" height="400px"></div>
+  </div>
+</nav>

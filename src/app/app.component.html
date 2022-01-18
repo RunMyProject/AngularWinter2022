@@ -1,0 +1,36 @@
+<!--
+/*
+  *************************************
+  * AngularWinter2022                 *
+  * for Angular 13.1                  *
+  * @Jan / 2022 - by Edoardo Sabatini *
+  *************************************
+*/
+-->
+<!-- Login / Registrazione -->
+<div *ngIf="!currentUser"
+    class="myaccount">
+    <img src="/assets/images/my_account.png" height="33px">
+</div>
+
+<!--
+  ---------------------------------
+  panel of Administration!
+  if you want, remove my comments!
+  ---------------------------------
+-->
+<!-- nav
+<nav class="" *ngIf="currentUser">
+  <div class="">
+    <a class="" routerLink="/">Dashboard</a><span>&nbsp;|&nbsp;</span>
+    <a class="" routerLink="/admin">Admin</a><span>&nbsp;|&nbsp;</span>
+    <button (click)="logout()">Logout</button>
+  </div>
+</nav>
+-->
+
+<!-- main app container -->
+<div class="">
+    <alert></alert>
+    <router-outlet></router-outlet>
+</div>

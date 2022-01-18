@@ -1,0 +1,22 @@
+<!--
+/*
+  *************************************
+  * AngularWinter2022                 *
+  * for Angular 13.1                  *
+  * @Jan / 2022 - by Edoardo Sabatini *
+  *************************************
+*/
+-->
+<nav *ngIf="currentUser">
+  <h1>Ciao {{currentUser.email}}!</h1>
+  <p>Tu sei loggato con Angular 13.1!</p>
+  <hr/>
+  <div><button (click)="deleteAllUsers()">Cancella tutti gli utenti</button></div>
+  <hr/>
+  <h3>Tutti gli utenti registrati ({{users.length}}):</h3>
+  <ul>
+      <li *ngFor="let user of users">
+          {{user.email}} - <button *ngIf="user.id" (click)="deleteUser(user.id)">Elimina</button>
+      </li>
+  </ul>
+</nav>

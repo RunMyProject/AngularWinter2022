@@ -1,0 +1,61 @@
+/*
+  *************************************
+  * AngularWinter2022                 *
+  * for Angular 13.1                  *
+  * @Jan / 2022 - by Edoardo Sabatini *
+  *************************************
+*/
+.dashboard {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/*  SECTIONS  */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  GRID SPAN  */
+@media only screen and (min-width: 480px) {
+  .span_3_of_3 {
+    width: 100%;
+  }
+  .span_2_of_3 {
+    width: 66.1%;
+  }
+  .span_1_of_3 {
+    width: 32.2%;
+  }
+
+  /*  COLUMN SETUP  */
+  .col {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 1.6%;
+  }
+  .col:first-child {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .section {
+    width: 100%; /* fix for Firefox */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}

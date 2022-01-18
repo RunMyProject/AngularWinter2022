@@ -1,0 +1,55 @@
+<!--
+/*
+  *************************************
+  * AngularWinter2022                 *
+  * for Angular 13.1                  *
+  * @Jan / 2022 - by Edoardo Sabatini *
+  *************************************
+*/
+-->
+<nav class="login">
+  <div><img src="/assets/images/login.png" height="40px"></div>
+  <form class="login" [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="loginForm">
+      <div class="form-group" *ngIf="f">
+          <input type="email" formControlName="email"
+                 class="rcorner form-control fontplace"
+                 [ngClass]="{ 'is-invalid': submitted && f['email'].errors}"
+                 placeholder="Email"
+                 email
+                 />
+          <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+              <div *ngIf="f['email'].errors['required']">Email &egrave; richiesta</div>
+              <div *ngIf="f['email'].errors['minlength']">Email: almeno 3 caratteri</div>
+              <div *ngIf="f['email'].errors['pattern']">Email: deve essere formato standard</div>
+          </div>
+      </div>
+      <div class="form-group" *ngIf="f">
+          <input type="password" formControlName="password"
+                 style="margin-left: -15px; margin-top: 10px;"
+                 class="rcorner form-control fontplace"
+                 [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+                 autocomplete="current-password"
+                 placeholder="Password"
+                 [type]="show ? 'text' : 'password'"/>
+                 <!--
+                   FAKE EYE! ;-)
+                   <i (click)="password()" style="margin-left: -30px; cursor: pointer;" class="far fa-eye"></i>
+                 -->
+                <img (click)="password()" style="margin-left: -30px; cursor: pointer;" src="/assets/images/eye.png" height="15px">
+          <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+              <div *ngIf="f['password'].errors['required']">Password &egrave; richiesta</div>
+              <div *ngIf="f['password'].errors['minlength']">Troppo poco! - Password deve essere di 8 caratteri</div>
+              <div *ngIf="f['password'].errors['maxlength']">Troppo lunga! - Password deve essere di 8 caratteri</div>
+          </div>
+      </div>
+      <div class="form-group">
+          <button [disabled]="loading" class="rcornerButton">
+              <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+              Accedi
+          </button>
+          <button class="rcornerButton">
+            <a routerLink="/register" class="rcornerLink">Registrati</a>
+          </button>
+      </div>
+  </form>
+</nav>

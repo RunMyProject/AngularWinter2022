@@ -1,0 +1,38 @@
+<!--
+/*
+  *************************************
+  * AngularWinter2022                 *
+  * for Angular 13.1                  *
+  * @Jan / 2022 - by Edoardo Sabatini *
+  *************************************
+*/
+-->
+<nav class="confirmed">
+  <div>Conferma registrazione</div>
+  <div style="margin-top: 10px;">
+    <input type="email" [readOnly]
+      class="rcorner form-control"
+      text="email"
+      disabled
+      value="{{email}}"
+      />
+  </div>
+  <div style="margin-top: 10px;">
+    <input style="margin-left: -15px;"
+      type="text" [readOnly]
+      class="rcorner form-control"
+      disabled
+      value="{{password}}"
+    />
+    <img style="margin-left: -30px;" src="/assets/images/eye.png" height="15px">
+    <!--
+    <i style="margin-left: -30px; cursor: pointer;" class="far fa-eye"></i>
+    -->
+  </div>
+  <div>
+    <button class="rcornerButton">
+      <a [routerLink]="['/login', {email: email, password: password}]"
+         class="rcornerLink">Login</a>
+    </button>
+  </div>
+</nav>
